@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="202426201053_邓海">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第七周作业</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+    *{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+    }
+    body{
+        min-height: 100vh;
+        display:flex;
+        flex-direction: column;
+      
+    }
+    header{
+        height: 70px;
+        margin:0 auto;
+        max-width: 1200px;
+    }
+    nav{
+        background-color: rgb(147, 16, 16);
+        color: white;
+        padding-bottom:5px;
+        padding-top:5px;
+        
+    }
+    nav ul{
+        display:flex;
+        list-style-type: none;
+    }
+    #li{
+        position:relative;
+        padding-right: 40px;
+    }
+    nav li ul{
+        display:none;
+        position:absolute;
+        left: -16px;
+        top:25px;
+        background-color: rgba(0, 0, 0, 0.717);
+        width: 102px;
+    }
+    nav li:hover>ul{
+        display: block;
+     }
+    nav li ul li{
+             font-size: small;
+             width:109px;
+             padding:5px 0px 5px 19px;
+    }
+    
+    .li{
+        display:block;
+        padding-right: 40px;
+    }
+    .ol{
+        display: flex;
+        justify-content: space-around;
+        gap:20px;
+        margin:0 auto;
+        max-width: 1200px;
+        background-color: white;
+    }
+    main{
+        flex:1;
+        background-image:url(background.png)
+    }
+    #itm{
+        flex:1;
+       padding-right: 10px;
+    }
+    article{
+        flex:2;
+        padding-left:23px;
+        padding-right: 24px;
+    }
+    #itm ul{
+        padding-bottom:30px;
+    }
+    #itm li{
+       line-height:30px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .s{ 
+        width:75px;
+        padding-bottom:10px;
+        font-size:large; 
+        border-bottom:3px  solid rgb(233, 68, 68);
+    }
+    .t{
+        border-top:1px solid gray;
+    }
+    .c{
+        padding-left: 11px;
+    }
+    .ul{
+        width:172px;
+        position:absolute;
+        left:-20px;
+    }
+    .ul li{
+        width:200px;
+    }
+    figure{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        position:fixed;
+        top:350px;
+        left:1560px;
+        text-align: center;
+       
+    }
+    figure img{
+        padding-top: 10px;
+        width: 30px;
+        height:30px;
+    }
+    article>ul{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom:10px;
+        border-bottom:1px  solid hwb(0 50% 50% / 0.438);
+        border-width:1.5px;
+    }
+    article>ul>li{
+        font-size:large;
+    }
+    article>section{
+        padding: 0%;
+        margin: 0%;
+    }
+    article>section>ul>li{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap:nowrap;
+        line-height:30px;
+    }
+    article>section>ul>li>span:first-child{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+       
+    }
+    footer{
+        background-color:rgb(147, 16, 16);
+        height:80px;
+    }
+    aside{
+        min-height: 340px;
+        margin:0 auto;
+        max-width: 1200px;
+    }
+    aside img{
+        width:100%;
+        height:100%;
+    }
+    .wrap{
+        margin:0 auto;
+        max-width: 1200px;
+        height:100%;
+    }
+    
+    nav>ul:last-child{
+        display:none;
+        padding: 0 10px;
+    }
+    .k{
+        width:25px;
+        height: 3px;
+        float:right;
+        background-clip: content-box;
+        border-bottom: 3px solid white;
+        border-top: 3px solid white;
+        background-color: white;
+        padding: 5px 0;
+        margin: 0 auto;
+    }
+    @media(max-width:1110px){
+        nav>ul:first-child{
+            display:none;
+        }
+        nav>ul:last-child{
+            display:block;
+        
+        }
+    }
+    @media (max-width:991px) {
+    .ol{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+    #itm{
+    padding-left:23px;
+    padding-right: 24px;
+    }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <img src="logo.png">
+        <img src="jsnd.png">
+    </header>
+     <nav>
+        <ul class="wrap">
+        <li id="li">首页</li>
+        <li id="li">学校概况
+            <ul>
+            <li>学校简介</li>
+            <li>学校章程</li>
+            <li>历史沿革</li>
+            <li>历任领导</li>
+            <li>领导关怀</li>
+            <li>组织机构</li>
+            <li>办公电话</li>
+            <li>走进师大</li> 
+            </ul>
+        </li>
+        <li id="li">机构设置
+            <ul>
+                <li>党政机构</li>
+                <li>教学机构</li>
+                <li>业务机构</li>
+                <li>附属机构</li>
+                <li>科研机构</li>
+            </ul>
+        </li>
+        <li id="li">师资队伍
+            <ul>
+               <li class="c">正高职称人员</li>
+               <li>人才招聘</li>
+            </ul>
+        <li id="li">教育教学
+            <ul>
+                <li>本科生教育</li>
+                <li>研究生教育</li>
+                <li class="c">国际学生教育</li>
+                <li>继续教育</li>
+                <li class="c">慕课（网络教育）</li>
+            </ul>
+        </li>
+        <li id="li">科学研究
+            <ul>
+                <li>科研工作</li>
+                <li>社科工作</li>
+                <li>科研机构</li>
+            </ul>
+        </li>
+        <li id="li">招生就业
+            <ul>
+                <li>本科生招聘</li>
+                <li>研究生招生</li>
+                <li>毕业生就业</li>
+            </ul>
+        </li>
+        <li id="li">合作交流</li>
+        <li id="li">图书档案 
+            <ul>
+                <li>图书馆</li>
+                <li>档案馆</li>
+            </ul>
+        </li>
+        <li id="li">走进师大
+            <ul>
+                <li>校园生活</li>
+                <li>校园参观</li>
+                <li>实用信息</li>
+                <li>信息公开</li>
+            </ul>
+        </li>
+        <li id="li">English
+            <ul class="ul">
+                <li>Brief Introduction</li>
+                <li class="c">Historical Development</li>
+                <li>School Philosophy</li>
+                <li class="c">Academic Establishment</li>
+                <li>Scientific Research</li>
+                <li>Teaching staff</li>
+                <li>Training of Talents</li>
+                <li class="c">Student Competition</li>
+                <li>Teacher Education</li>
+                <li>Service to Society</li>
+                <li class="c">International Cooperation</li>
+                <li>Alumni</li>
+                <li>Schools</li>
+                <li>International Student</li>
+            </ul>
+        </li>    
+    </ul>
+    <ul>
+        <li>
+            <span>导航栏</span>
+            <div class="k"></div>
+        </li>
+    </ul>
+    </nav>
+    <aside>
+        <img src="lun.jpg">
+    </aside>
+    <figure>
+    <img src="APP.png">
+    <figcaption>江西师范大学APP</figcaption>
+    <img src="zaixiaoxueshen.png">
+    <figcaption>在校学生</figcaption>
+    <img src="jiaozhi.png">
+    <figcaption>教职员工</figcaption>
+    <img src="std.png">
+    <figcaption>未来学生</figcaption>
+    <img src="ab.png">
+    <figcaption>Int'Student</figcaption>
+    <img src="xiaoyou.png">
+    <figcaption>校友</figcaption>
+</figure>
+<main>
+<div class="ol">
+<article class="d">
+    <ul>
+        <li>时政要闻</li>
+        <li>师大新闻</li>
+        <li>校园动态</li>
+        <li>媒体师大</li>
+        <li>学术师大</li>
+        <li>师德建设</li>
+        <li>More+</li>
+    </ul>
+<section>
+<ul>
+    <li>
+        <span>习近平对贵州毕节市黔西市游船倾覆事故作出重要指示</span>
+        <span>05-15</span>
+    </li>
+    <li>
+        <span>习近平给谢依特小学戍边支教西部计划志愿者服务队队员回信</span>
+        <span>05-04</span>
+    </li>
+    <li>
+        <span>习近平主持召开部分省区市“十五五”时期经济社会发展座谈会</span>
+        <span>05-03</span>
+    </li>
+    <li>
+        <span>尹弘叶建春会见我省受表彰的全国劳动模范和先进工作者，向全省广大劳动者致以节日问候</span>
+        <span>05-12</span>
+    </li>
+    <li>
+        <span>省委常委会召开会议，尹弘主持</span>
+        <span>05-09</span>
+    </li>
+    <li>
+        <span>中央第十五巡视组巡视江西省工作动员会召开</span>
+        <span>05-08</span>
+    </li>
+</ul>
+</section>
+</article>
+<div id="itm">
+<p class="s">通知公告</p>
+<ul>
+    <li class="t">江西师范大学2025年度校历表</li>
+    <li>江西师范大学2025年诚聘海内外高层次人才公告</li>
+    <li>江西革命军事馆征集文物史料公告</li>
+    <li>询价公告</li>
+    <li>采购公告</li>
+    <li>比选公告</li>
+</ul>
+<img src="书记校长信箱.png">
+<img src="办公系统.png">
+<img src="一站式服务大厅.jpg">
+<br>
+<img src="教务在线.png">
+<img src="研究生教育.png">
+<img src="VPN.png">
+</div>
+</div>
+</main>
+    <footer>链接</footer>
+</body>
+</html>
+<script></script>
